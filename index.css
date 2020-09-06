@@ -1,0 +1,39 @@
+p {
+  color: #1A341A;
+}
+
+nav ul {
+  color: #1A341A;
+}
+nav li a {
+  color: red;
+  font-weight: bold;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#class {
+  font-size: 23px;
+}
+
+.id {
+  font-size: 5px;
+}
+
+.grid-item {
+  padding: 20px;
+}
+
+.grid-items {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+
+img {
+  width: 180px;
+  height: 200px;
+}
+
+/*# sourceMappingURL=index.css.map */
