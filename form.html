@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+    <title>Document</title>
+    <style>
+        .form{
+            position: relative;
+            top: 2em;
+            left: 6em;
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+            border: 0 0 0 1px ;
+            border-style: hidden;
+            width: 20rem;
+            background-color: rgb(245, 252, 252);
+            padding-left: 2rem;
+            /* color: royalblue; */
+        }
+        textarea{
+            padding-bottom: 1px;
+        }
+        /* pseudo class helps us show an error */
+      input:invalid{
+          background: 2px solid red;
+      }
+
+        input:valid {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <li class="nav-items" onclick="location.href='assignment.html';">Home
+                
+            </li>
+            <li class="nav-items" onclick="location.href='about.html';">About </li>
+            <li class=" nav-items dropdown dropbtn" onclick="myFunction()">myWorks
+                <!-- <button  class="">Dropdown</button> -->
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="animate_images.html">pics_anim</a>
+                  <a href="giffated.html">status</a>
+                  <a href="form.html">form</a>
+                </div>
+            </li>
+            <li class="nav-items far-end" onclick="location.href='contacts.html'">Contacts</li>
+        </div>
+
+    </header>
+    <div class="form">
+        <form action="form.html" method="POST" id="myForm">
+            <label for="name">name:</label><br>
+            <input type="text" id="name" name="user_name" minlength="3" maxlength="12" pattern="/[a-zA-Z]/gm"><br>
+            <p id="err"></p>
+            <label for="number">id:</label><br>
+            <input type="text" id="number" name="user_id" maxlength="12" minlength="2" pattern="/[0-9]/gm"><br>
+            <span class="err"></span>
+            <label for="text">message:</label><br>
+            <textarea name="user_msg" id="text" cols="30" rows="10">Write here</textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    myFunction();
+    function myFunction() {
+var txt = "";
+// if(document.getElementById("name").
+if (document.getElementById("name").validity.rangeOverflow) {
+txt = "Value too large";
+}
+document.getElementById("err").innerHTML = txt;
+}
+
+
+</script>
+</html>

@@ -1,30 +1,137 @@
-<html>
-<link rel="stylesheet" type="text/css" href="index.css"/>
-<body>
-    <!-- <nav>
-
-        <ul class="id">how you doing</ul>
-        <li id="class">
-            <a href="#">check out my link</a>
-        </li>
-    </nav>
-    <p>what a paragraph</p> -->
-    <div class="grid-items">
-<div class="grid-item" style="grid-gap: 50px 100px;">
-    <img src="C:\\Users\\milly%20g\\Pictures\\VirtualBox_kali_14_11_2019_13_41_02.png" alt="kali">
-</div>
-<div class="grid-item" style="grid-gap: 50px 100px;"><img src="" alt=""></div>
-<div class="grid-item" style="grid-gap: 50px 100px;"><img src="" alt=""></div>
-<div class="grid-item" style="grid-gap: 50px 100px;"><img src="" alt="">
-</div>
-<div class="grid-item" style="grid-gap: 50px 100px;"><img src="" alt=""></div>
-<div class="grid-item" style="grid-gap: 50px 100px;"><img src="" alt=""></div>
-<div class="grid-item" style="grid-gap: 50px 100px;"><img src="" alt=""></div>
-<div class="grid-item" style="grid-gap: 50px 100px;"><img src="" alt=""></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mika's port webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="common.css">
    
-<img alt="Visa Checkout" class="v-button" role="button"
-src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png"/>
-</div>
+    <title>Document</title>
+    <style>
+       body{
+            font: 16px Verdana small ;
+            color: #9B9B9B;  
+        } 
+        footer{
+            position: relative;
+            top: 2px;
+        }
+        li+img{
+            border:red 2px solid;
+        }
+        .wrapper{
+            /* align-content: center; */
+            /* position: relative;
+            left: 30px; */
+            align-self: center;
+            /* align-items: center; */
+            transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+            transition-duration: 0.3s;
+        }
+        .grid-items{
+            float: left;
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+        } 
+        
+        @media screen and(max-width:600px){
+            .grid-items{
+            display: flex;
+            padding-right: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+        }
+        main{
+            margin-bottom: 10px;
+        }
+        
+       
+        </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <li class="nav-items" onclick="location.href='assignment.html';">Home
+                
+            </li>
+            <li class="nav-items" onclick="location.href='about.html';">About </li>
+            <li class=" nav-items dropdown dropbtn" onclick="myFunction()">myWorks
+                <!-- <button  class="">Dropdown</button> -->
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="animate_images.html">pics_anim</a>
+                  <a href="giffated.html">status</a>
+                  <a href="form.html">form</a>
+                </div>
+            </li>
+            <li class="nav-items far-end" onclick="location.href='contacts.html'">Contacts</li>
+        </div>
 
+    </header>
+    <main>
+        <div id="wrapper">
+            <div id="container intro">
+               <h2><div>This is our main page</div></h2>
+               
+            <div class="grid-items">
+                    <iframe width="200" height="200" src="https://www.youtube.com/embed/-OWJ7c4mRrw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-style: none; overflow-x: hidden;"></iframe>
+                </div>
+            </div>
+            <div class="grid-items">
+                <img src="gosple1.png" width="200" height="200">
+            </div>
+
+            <div>
+                <img src="gosple2.png" width="200" height="200">
+            </div>
+           
+            
+            
+        </div>
+        
+    </main>
+    <footer>
+        <div class="social">
+            <li onclick="location.href='https://www.instagram.com/ngabomikr/';">
+                <img src="icons/insta.png" width="20px" height="20px" onclick="yes">
+
+            </li>
+            <li onclick="location.href='https://www.facebook.com/mika.ngabo/';">
+                <img src="icons/LinkedIn.png" width="20px" height="20px" onclick="yes">
+
+            </li>
+        </div>
+    </footer>
 </body>
+<script>
+    navigator.geolocation.getCurrentPosition((position)=>{
+        alert("your current latitude is"+position.coords.latitude
+        +"your current longitude is"+position.coords.longitude+
+        "your current altitude accuracy is"+position.coords.altitudeAccuracy);
+
+    },(err)=>{
+        alert("couldn't retrieve your location"+err);
+        });
+
+        function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </html>
