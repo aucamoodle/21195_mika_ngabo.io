@@ -1,0 +1,93 @@
+.nav-items{
+    float: left;
+    border: 2px solid blue;
+    border-style: none;
+    color: rgb(204, 198, 198);
+    /* setting color for text */
+    padding: 1em 1em 1em 0;
+    /* text-decoration-style: none; */
+    list-style: none; 
+    /*for eliminating bullets */
+    /* text-decoration-color: rgb(184, 174, 174); */
+}
+
+header,.nav{
+    max-width: 101%;
+    width: 100%;
+    background-color: rgb(4, 4, 116);
+    height: 3em;
+    font: Verdana;
+    /* height to fit boxes of content */
+}
+.nav-items:hover{
+    /* decoration for animation(lines e.g strikethrough) */
+    /* decoration-style e.g dotted */
+    text-decoration: overline;
+    text-decoration-style: solid;
+    color: turquoise;
+}
+.social > li{
+    list-style: none;
+    display: inline;
+    padding-top: 40px;
+    padding-left: 20px;
+    position: relative;
+    bottom: 0;
+}
+.far-end{
+    /* clear:left; */
+    float: right;
+    /* align-self: flex-end; */
+}
+main{
+    width: 100%;
+    text-align: center;
+    /* left: 4 rem; */
+}
+body{
+    background-color: rgb(241, 246, 246);
+}
+ /*dropdown  */
+ .dropbtn {
+    /* background-color: #3498DB; */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  /* .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  } */
+  
+  /* The container <div> - needed to position the dropdown content */
+  /* .dropdown {
+    position: relative;
+    display: inline-block;
+  } */
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  /* .dropdown-content a:hover {background-color: #ddd} */
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
