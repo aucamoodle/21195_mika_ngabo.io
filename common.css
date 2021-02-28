@@ -14,8 +14,11 @@
 header,.nav{
     max-width: 101%;
     width: 100%;
-    background-color: rgb(4, 4, 116);
+    /* background-color: rgb(4, 4, 116); */
+    background-color: rgb(23, 29, 29);
+    opacity: 0.9;
     height: 3em;
+    color: white;
     font: Verdana;
     /* height to fit boxes of content */
 }
@@ -44,8 +47,13 @@ main{
     text-align: center;
     /* left: 4 rem; */
 }
-body{
+/* body{
     background-color: rgb(241, 246, 246);
+} */
+body{
+  background-image: url("pexels.jpg");
+  background-size: cover;
+  color:white;
 }
  /*dropdown  */
  .dropbtn {
