@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	function show(){
+		var i,no,fact;
+		fact=1;
+		no=Number(document.getElementById("num").value);
+		for (i=1; i<=no;i++) {
+			fact= fact*i;
+	
+		}
+		document.getElementById("answer").value= fact;
+
+}
+</script>
+</head>
+<body>
+<nav>
+  
+   
+             
+               <ul>
+              
+              <li><a  href="factorial.html">Question1</a></li>
+              <li><a href="fibonacci.html">Question2</a></li>
+              <li><a href="sum.html">Question3</a></li>
+              <li><a href="range.html">Question4</a></li>
+              <li><a href="multiples.html">Question5</a></li>
+              <li><a href="mergesort.html">Question6</a></li>
+              
+          </ul>
+  </nav>
+Enter the Number: <input id="num">
+<button onclick="show()">Factorial</button>
+<input id="answer">
+</body>
+</html>

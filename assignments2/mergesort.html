@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+
+
+
+		function mergeSort(array) {
+  const half = array.length / 2
+  
+  // Base case or terminating case
+  if(array.length < 2){
+    return array 
+  }
+  
+  const left = array.splice(0, half)
+  return merge(mergeSort(left),mergeSort(array))
+}
+
+function merge(left, right) {
+    var arr = [];
+    // Break out of loop if any one of the array gets empty
+    while (left.length && right.length) {
+        // Pick the smaller among the smallest element of left and right sub arrays 
+        if (left[0] < right[0]) {
+            arr.push(left.shift())  
+        } else {
+            arr.push(right.shift()) 
+        }
+    }
+    
+    // Concatenating the leftover elements
+    // (in case we didn't go through the entire left or right array)
+    return [ ...arr, ...left, ...right ]
+}
+
+function show(){
+	document.getElementById("answer").innerHTML=mergeSort([3,1,7,5,10]);
+}
+</script>
+</head>
+<body>
+<nav>
+  
+   
+             
+               <ul>
+              
+              <li><a  href="factorial.html">Question1</a></li>
+              <li><a href="fibonacci.html">Question2</a></li>
+              <li><a href="sum.html">Question3</a></li>
+              <li><a href="range.html">Question4</a></li>
+              <li><a href="multiples.html">Question5</a></li>
+              <li><a href="mergesort.html">Question6</a></li>
+              
+          </ul>
+  </nav>
+	<div id="array">Original aarray:[3,1,7,5,10]</div>
+	<button onclick="show()">Merge Sort</button>
+    <div id="answer"></div>
+
+</body>
+</html>
