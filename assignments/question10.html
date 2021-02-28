@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="radius"></label>
+    <input type="text" name="radius" id="rad">
+    <label for="volume"></label>
+    <input type="text" name="volume" id="vol">
+    <input type="button" value="submit" id="sub">
+</body>
+<script>
+    var butt=document.getElementById("sub")
+    butt.onclick=function(e){
+        var rad=document.getElementById("rad").value;
+        var vol=document.getElementById("vol");
+        console.log(rad)
+        console.log(vol)
+        var calc=(4*3.14*rad*rad*rad)/3
+        vol.setAttribute("value",calc)
+        // alert()
+    }
+</script>
+</html>

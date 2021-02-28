@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" value="click" onclick="opr()">
+    <br>
+    <img src="https://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg" width="240" height="160">
+    <img src="https://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg" width= "320" height= "195">
+    <img src="https://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg" width= "500" height= "343">
+    
+</body>
+<script>
+function opr(){
+    var img_arr=document.querySelectorAll("img");
+    img_arr.forEach(element=>{
+        element.style.display="none";
+   });
+   //Math.random generates a random float between 0 and n(n not inclusive)
+   //Math.floor makes an integer from float
+    var random=Math.floor((Math.random() * 3))
+    img_arr[random].style.display="block"
+}
+   
+</script>
+</html>

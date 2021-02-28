@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset=utf-8 />
+</head>
+<body>
+<p><a id="w3r" type="text/html" hreflang="en-us"
+rel="nofollow" target="_self"
+href="https://www.w3resource.com/">w3resource</a></
+p>
+<button onclick="getAttributes()">Click here to get
+attributes value</button>
+</body>
+<script>
+    function getAttributes(){
+    var para=document.getElementById("w3r");
+    var body=document.querySelector("body");
+    // var hr=document.createElement("hr");
+    var span=document.createElement("span");
+    //var link=document.getElementsByTagName("a");
+        para.style.backgroundColor="green";
+    var htt=document.getElementById("w3r");
+    
+    span.innerText="type: "+htt.getAttribute("type")+"\nhreflang: "+htt.getAttribute("hreflang")+"\ntarget: "
+    +htt.getAttribute("target")+"\nrel: "+htt.getAttribute("rel")+"\nhref: "+htt.getAttribute("href");
+    body.appendChild(span);
+    span.style.display=block;
+    // span.style.border="2px solid black";
+    span.style.color="green";
+    }
+</script>
+</html>

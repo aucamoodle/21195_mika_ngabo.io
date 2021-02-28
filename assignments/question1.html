@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS DOM paragraph style</title>
+<style>
+    body{
+        font: Arial;
+        font-size: 1em;
+        color:black;
+    }
+</style>
+</head>
+<body>
+<p id ='text'>JavaScript Exercises - w3resource</p>
+<div>
+<button id="jsstyle" style="font: Arial;"
+onclick="js_style()">Style</button>
+</div>
+</body>
+<script>
+    
+    function js_style(){
+        var b=document.getElementById("jsstyle");
+                // var arr=[b.style.color,b.style.font,b.style.fontSize];
+        // alert(arr[0]);
+        // setInterval(()=>{
+            
+        b.style.font="Verdana";
+        b.style.color="green";
+        // b.style.fontSize="13px";
+        // },2000);
+        // b.style.font=arr[1]
+        // b.style.color=arr[0]
+        // b.style.fontSize=arr[2]
+    }
+    
+</script>
+</html>

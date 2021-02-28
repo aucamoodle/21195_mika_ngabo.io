@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset=utf-8 />
+<style type="text/css">
+body {margin: 30px;}
+</style>
+<title>Count and display items of a dropdown list -
+w3resource</title>
+</head><body><form>
+Select your favorite Color :
+<select id="mySelect">
+<option>Red</option>
+<option>Green</option>
+<option>Blue</option>
+<option>White</option>
+</select>
+<input type="button" onclick="getOptions()" value="Count and
+Output all items">
+</form></body>
+<script>
+    function getOptions(){
+        var drop=document.getElementById("mySelect");
+        var body=document.querySelector("body");
+        // console.log(drop.options)
+        // (drop.options).forEach(element => {
+        //     alert(element.text+"\t"+drop.options.length)
+        // });
+        var span=document.createElement("span");
+    span.innerText="items are: "+drop.options[0].text+
+    "\t"+drop.options[1].text+"\t"
+        +drop.options[2].text+"\t"
+        +drop.options[3].text+"\nlength is: "
+        +drop.options.length;
+
+    body.appendChild(span);
+    span.style.display="block";
+    span.style.backgroundColor="green";
+    span.style.borderRadius="2px";
+    span.style.borderStyle="solid";
+    span.style.borderColor="black";
+    }
+</script>
+</html>
